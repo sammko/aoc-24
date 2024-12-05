@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "build": true,
+    },
+    "[gleam]": {
+      "editor.formatOnSave": true,
+      "editor.tabSize": 2
+    }
+}
