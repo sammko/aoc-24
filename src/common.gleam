@@ -12,3 +12,10 @@ pub fn loadlines(fname) {
   use text <- try(simplifile.read(fname) |> result.replace_error(Nil))
   string.split(text, "\n") |> list.filter(fn(l) { !string.is_empty(l) }) |> Ok
 }
+
+pub fn product(a, b) {
+  case a {
+    [x, ..xs] -> list.map(b, fn(y) { #(x, y) }) |> list.append(product(xs, b))
+    [] -> []
+  }
+}
